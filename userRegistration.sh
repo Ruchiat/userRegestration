@@ -62,3 +62,20 @@ then
 else
 	echo "Invalid_Information"
 fi
+
+
+#minimum 8 Characters for password
+
+read -p "Please Enter Password: " Password
+
+#Validating password
+Password_pat="^[0-9 A-Z a-z]{8,}"
+
+
+if [[ $Password =~ $Password_pat ]]
+then
+	echo "Valid_Information"
+else
+	echo "Invalid_Information"
+	
+fi
