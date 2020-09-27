@@ -20,3 +20,17 @@ else
 fi;
 
 
+#Last name starts with Cap and has minimum 3 characters
+
+#Validating last name
+
+read -p "Please enter your Last Name: " Last
+
+lastNamePat="^[[:upper:]]{1}[a-zA-Z0-9]{2,}$"
+
+if [[ $Last =~ $lastNamePat ]]
+then
+	echo "Valiid_Full_Name"
+else
+	echo "Invalid_Full_Name"
+fi
