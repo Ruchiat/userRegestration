@@ -69,7 +69,7 @@ fi
 read -p "Please Enter Password: " Password
 
 #Validating password
-Password_pat="^[0-9 A-Z a-z]{8,}"
+Password_pat="^([0-9 & A-Z a-z] ?[@!*&^%.]{1}]){8,}"
 
 
 if [[ $Password =~ $Password_pat && $Password =~ [[:upper:]] ]]
