@@ -72,7 +72,7 @@ read -p "Please Enter Password: " Password
 Password_pat="^[0-9 A-Z a-z]{8,}"
 
 
-if [[ $Password =~ $Password_pat ]]
+if [[ $Password =~ $Password_pat && $Password =~ [[:upper:]] ]]
 then
 	echo "Valid_Information"
 else
